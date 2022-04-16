@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .too{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 200px;
+        }
+        .tegsh{
+            width: 150px;
+        }
+        .hurd{
+            width: 100px;
+        }
+        .dun{
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="too">
+        <button class="tegsh" onclick="tegsh()">tegsh sondgoi</button>
+        <button class="hurd" onclick="hurd()">hurd</button>
+        <button class="dun" onclick="dun()">dun</button>
+    </div>
+    <script>
+        let i = 1;
+        function tegsh(){
+        while(i <= 20){
+            if(i % 2===0){
+                document.write(i+"-ni tegsh too ");
+                document.write('<br/>')
+            }else{
+                document.write(i+"-ni sondgoi too ");
+                document.write('<br/>');
+            }
+            i++;
+        }
+    }
+
+        let a=1;
+        let b=1;
+        function hurd(){
+        while(a<10){
+            while(b<10){
+                document.write(a+'*'+b+'='+a*b) ;
+                document.write('<br/>')
+                b++
+            }
+            if(a<=9){
+                document.write('<br/>')
+            }
+            b=1
+            a++
+        }
+    }
+
+        let k=1;
+        function dun(){
+        while(k<=100){
+            if(k<60){
+                document.write(k + ' F')
+                document.write('<br/>')
+            }else if(k<70){
+                document.write(k+' D')
+                document.write('<br/>')
+            }else if(k<80){
+                document.write(k+' C')
+                document.write('<br/>')
+            }else if(k<90){
+                document.write(k+' B')
+                document.write('<br/>')
+            }else if(k<=100){
+                document.write(k+ ' A')
+                document.write('<br/>')
+            }
+            k++;
+        }
+    }
+    </script>
+</body>
+</html>
